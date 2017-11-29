@@ -220,7 +220,7 @@ pub struct Avatar {
     handL_rx: f32, handL_ry: f32, handL_rz: f32, handL_rw: f32,
     handR_px: f32, handR_py: f32, handR_pz: f32, handR_pw: f32,
     handR_rx: f32, handR_ry: f32, handR_rz: f32, handR_rw: f32,
-    height: f32, floor: f32,
+    height: f32, floor: f32, GripL: f32, GripR: f32, 
 }
 
 #[no_mangle]
