@@ -18,7 +18,8 @@ extern "C" {
         float handL_rx, handL_ry, handL_rz, handL_rw;
         float handR_px, handR_py, handR_pz, handR_pw;
         float handR_rx, handR_ry, handR_rz, handR_rw;
-        float height, floor;
+        float height, floor, GripL, GripR;
+	
     } AvatarPack;
 
     typedef struct RigidbodyPack {

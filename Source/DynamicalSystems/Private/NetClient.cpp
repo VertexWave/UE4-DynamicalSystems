@@ -164,6 +164,9 @@ void ANetClient::Tick(float DeltaTime)
 			Pack.handR_rx = Rotation.X; Pack.handR_ry = Rotation.Y; Pack.handR_rz = Rotation.Z; Pack.handR_rw = Rotation.W;
 			Pack.height = Avatar->Height;
 			Pack.floor = Avatar->Floor;
+			Pack.GripL = Avatar->GripL;
+			Pack.GripR = Avatar->GripR;
+			
 			rd_netclient_push_avatar(Client, &Pack);
 		}
         LastAvatarTime = CurrentAvatarTime;
@@ -230,6 +233,9 @@ void ANetClient::Tick(float DeltaTime)
 					(*NetAvatar)->RotationHandR = FRotator(FQuat(Pack->handR_rx, Pack->handR_ry, Pack->handR_rz, Pack->handR_rw));
 					(*NetAvatar)->Height = Pack->height;
 					(*NetAvatar)->Floor = Pack->floor;
+					(*NetAvatar)->GripL = Pack->GripL;
+					(*NetAvatar)->GripR = Pack->GripR;
+
 				}
 				else {
 					MissingAvatar = (int)NetID;

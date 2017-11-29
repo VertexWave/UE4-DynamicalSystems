@@ -59,4 +59,10 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "NetClient")
 	bool IsNetProxy = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "NetAvatar")
+	float GripL = 0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "NetAvatar")
+	float GripR = 0;
 };
